@@ -1,5 +1,5 @@
 import OptionsButton from "./OptionsButtom.jsx";
-import { Bad, Neutral, BsEmojiSmile } from "react-icons/bs";
+import { BsEmojiFrown, BsEmojiNeutral, BsEmojiSmile } from "react-icons/bs";
 import css from "./Options.module.css";
 
 export default function Options({ handler, reset, total }) {
@@ -9,10 +9,10 @@ export default function Options({ handler, reset, total }) {
         Good <BsEmojiSmile />
       </OptionsButton>
       <OptionsButton handlers={handler} type="neutral">
-        Neutral <Neutral />{" "}
+        Neutral <BsEmojiNeutral />{" "}
       </OptionsButton>
       <OptionsButton handlers={handler} type="bad">
-        Bad <Bad />
+        Bad <BsEmojiFrown />
       </OptionsButton>
       { total > 0 && <OptionsButton handlers={reset}>Reset</OptionsButton>  }
     </div>
